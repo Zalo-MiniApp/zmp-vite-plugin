@@ -1,8 +1,8 @@
 {
-  "name": "vite-plugin-zalo-mini-app",
-  "version": "0.0.8",
+  "name": "zmp-vite-plugin",
+  "version": "1.0.0",
   "description": "Vite plugin for Zalo Mini App",
-  "author": "xuannghia",
+  "author": "Zalo Mini App",
   "files": [
     "dist"
   ],

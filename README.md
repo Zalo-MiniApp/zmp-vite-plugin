@@ -1,24 +1,23 @@
 # ⚡ Vite plugin for Zalo Mini App
 
-
 [![npm](https://img.shields.io/npm/v/vite-plugin-zalo-mini-app.svg)](https://www.npmjs.com/package/vite-plugin-zalo-mini-app)
 [![download](https://img.shields.io/npm/dt/vite-plugin-zalo-mini-app.svg)](https://www.npmjs.com/package/vite-plugin-zalo-mini-app)
 [![bundlephobia](https://img.shields.io/bundlephobia/minzip/vite-plugin-zalo-mini-app.svg)](https://bundlephobia.com/package/vite-plugin-zalo-mini-app)
 
-
 ## How to setup?
 
 ### 1. Install
+
 ```bash
-pnpm add -D vite-plugin-zalo-mini-app
+npm i -D zmp-vite-plugin
 ```
 
 ### 2. Update your `vite.config.ts`
-```typescript
 
-import { defineConfig, splitVendorChunkPlugin } from 'vite'
-import react from '@vitejs/plugin-react'
-import zaloMiniApp from 'vite-plugin-zalo-mini-app'
+```typescript
+import { defineConfig, splitVendorChunkPlugin } from "vite";
+import react from "@vitejs/plugin-react";
+import zaloMiniApp from "vite-plugin-zalo-mini-app";
 
 export default () => {
   return defineConfig({
@@ -27,19 +26,19 @@ export default () => {
       splitVendorChunkPlugin(), // If you want to split vendor chunk to reduce the size of the main bundle
       zaloMiniApp({
         app: {
-          title: 'Mini App Name',
-          headerTitle: 'Mini App Name',
-          headerColor: '#F25730',
-          textColor: 'black',
-          statusBar: 'normal',
+          title: "Mini App Name",
+          headerTitle: "Mini App Name",
+          headerColor: "#F25730",
+          textColor: "black",
+          statusBar: "normal",
           actionBarHidden: true,
           hideAndroidBottomNavigationBar: true,
           hideIOSSafeAreaBottom: true,
         },
       }),
     ],
-  })
-}
+  });
+};
 ```
 
 > Because this plugin will automatic generate `app-config.json` for you with the configuration you provided in `vite.config.ts`. So if you have `app-config.json` in your project, you should remove it.
@@ -62,7 +61,7 @@ pnpm add -g zmp-cli
     "start": "vite dev",
     "build": "tsc && vite build",
     "deploy:dev": "zmp-cli deploy --existing",
-    "deploy:testing": "zmp-cli deploy --existing --testing",
+    "deploy:testing": "zmp-cli deploy --existing --testing"
   }
 }
 ```
