@@ -22,13 +22,13 @@ type MiniAppOptions = {
   listAsyncJS?: string[];
 };
 
-export default function zaloMiniApp() {
+export default function zaloMiniApp(options?: MiniAppOptions) {
   const config: Plugin = {
     name: "vite-plugin-zalo-mini-app",
     config(config, env) {
-      const maOptions: MiniAppOptions = JSON.parse(
-        readFileSync("./app-config.json", { encoding: "utf-8" })
-      );
+      const maOptions: MiniAppOptions =
+        options ??
+        JSON.parse(readFileSync("./app-config.json", { encoding: "utf-8" }));
 
       return {
         base: env.command === "serve" ? config.base : "./",

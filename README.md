@@ -35,7 +35,7 @@ export default () => {
           hideAndroidBottomNavigationBar: true,
           hideIOSSafeAreaBottom: true,
         },
-      }),
+      }), // If you want to read configs from app-config.json, pass nothing, i.e., zaloMiniApp()
     ],
   });
 };
