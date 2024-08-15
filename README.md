@@ -1,9 +1,5 @@
 # ⚡ Vite plugin for Zalo Mini App
 
-[![npm](https://img.shields.io/npm/v/vite-plugin-zalo-mini-app.svg)](https://www.npmjs.com/package/vite-plugin-zalo-mini-app)
-[![download](https://img.shields.io/npm/dt/vite-plugin-zalo-mini-app.svg)](https://www.npmjs.com/package/vite-plugin-zalo-mini-app)
-[![bundlephobia](https://img.shields.io/bundlephobia/minzip/vite-plugin-zalo-mini-app.svg)](https://bundlephobia.com/package/vite-plugin-zalo-mini-app)
-
 ## How to setup?
 
 ### 1. Install
@@ -17,7 +13,7 @@ npm i -D zmp-vite-plugin
 ```typescript
 import { defineConfig, splitVendorChunkPlugin } from "vite";
 import react from "@vitejs/plugin-react";
-import zaloMiniApp from "vite-plugin-zalo-mini-app";
+import zaloMiniApp from "zmp-vite-plugin";
 
 export default () => {
   return defineConfig({
